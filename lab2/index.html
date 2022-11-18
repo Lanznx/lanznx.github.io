@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      background-color: #f0f0f0;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    #date {
+      font-size: 100px;
+      text-align: right;
+    }
+
+    #email {
+      font-family: 'Times New Roman', Times, serif;
+      font-optical-sizing: auto;
+      font-size: 30px;
+      color: blue;
+    }
+
+    p {
+      font-size: 20px;
+    }
+
+    span {
+      font-size: 10px;
+      color: red;
+    }
+  </style>
+
+
+</head>
+
+<body>
+  <h1>New HTML5 Input Types Demo</h1>
+  <p>This form demonstrates the new HTML5 input types and the placeholder, require and autofocus attributes</p>
+  <p>Color:
+    <input type="color" name="color" value="#000000">
+  </p>
+  <p id="date">Date:
+    <input type="date" name="date" value="2021-09-01">
+  </p>
+  <p id="email">
+    Email:
+    <input type="email" name="email" placeholder="Enter your email address" required>
+  </p>
+  <p>
+    <span>Number:</span>
+    <input type="number" name="number" min="1" max="7" step="1" value="5">
+  </p>
+  <p>Range: 0
+    <input type="range" name="range" min="1" max="20" step="1" value="10">
+    20
+  </p>
+  <p>Search:
+    <input type="search" name="search" placeholder="Enter your search term" autofocus>
+  </p>
+  <p>Time:
+    <input type="time" name="time" value="12:00">
+  </p>
+  <p>
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+  </p>
+</body>
+
+</html>
