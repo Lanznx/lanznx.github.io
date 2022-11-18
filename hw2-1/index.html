@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Checkout</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style>
+        body {
+            margin: 20px 0;
+        }
+        .jumbotron {
+            text-align: center;
+        }
+        .text-left {
+            text-align: left;
+        }
+        .container {
+            max-width: 750px;
+        }
+        form {
+            padding: 40px;
+            box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div class="container">
+        <div class="jumbotron">
+            <h4>Checkout</h4>
+            <p>確認購買下列產品</p>
+            <p>呂安外套</p>
+            <p>Price: $3</p>
+            <p>Size: XS</p>
+            <img src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fcf.shopee.tw%2Ffile%2Fc4e7a4c425230fca1a4fd949c7aaa77e&imgrefurl=https%3A%2F%2Fshopee.tw%2FNIKE-SWOOSH%25E5%25A4%25A7logo%25E9%25A2%25A8%25E8%25A1%25A3%25E5%25A4%2596%25E5%25A5%2597-i.3333334.2082510841&tbnid=cgeIWb8wCZRN-M&vet=12ahUKEwj4hqO1kbf7AhVryosBHQGZCNIQMygBegUIARCNAg..i&docid=Qh4xPNbz-4dfVM&w=800&h=800&q=nike%20%E5%A4%96%E5%A5%97&ved=2ahUKEwj4hqO1kbf7AhVryosBHQGZCNIQMygBegUIARCNAg" width="400"  alt="">
+        </div>
+        <form>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email"/>
+            </div>
+            <div class="form-group card-number-group">
+                <label for="card-number" class="control-label"><span id="cardtype"></span>卡號</label>
+                <input type="text" class="form-control" id="card-number" placeholder="卡號"/>
+            </div>
+            <div class="form-group expiration-date-group">
+                <label for="expiration-date" class="control-label">卡片到期日</label>
+                <input type="text" class="form-control" id="expiration-date" placeholder="MM / YY"/>
+            </div>
+            <div class="form-group cvc-group">
+                <label for="cvc" class="control-label">卡片後三碼</label>
+                <input type="text" class="form-control" id="cvc" placeholder="CVC"/>
+            </div>
+
+            <button type="submit" class="btn btn-default">Pay</button>
+        </form>
+        <br>
+    </div>
+</body>
+
+</html>

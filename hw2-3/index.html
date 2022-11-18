@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HW1</title>
+
+  <style>
+    body {
+      background-color: #f0f0f0;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    #date {
+      font-size: 100px;
+      text-align: right;
+    }
+    #email {
+      font-family: 'Times New Roman', Times, serif;
+      font-optical-sizing: auto;  
+      font-size: 30px;
+      color: blue;
+    }
+    p{
+      font-size: 20px;
+    }
+
+    </style>
+</head>
+
+<body>
+  <table border="1" style="width: 60%">
+    <tr>
+      <th colspan="4">About -- 109305092</th>
+    </tr>
+
+    <tr>
+      <td width="20px" rowspan="4">
+        <img
+          src="https://blog.kennycoder.io/2020/02/03/Golang-%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3interface%E5%B8%B8%E8%A6%8B%E7%94%A8%E6%B3%95/cover.png"
+          alt="109305092" width="200" height="200">
+        <p>personal photo</p>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        <p>Name:
+          <input type="text">
+        </p>
+        <p>Gender:
+        <form>
+          <input type="radio" name="gender" for="male" value="male"> Male
+          <input type="radio" name="gender" for="female" value="female"> Female
+          <input type="radio" name="gender" for="Others" value="Others"> Others
+        </form>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td width="35%" colspan="2">
+        <p>County
+          <select name="county" id="county">
+            <option value="Taipei">Taipei</option>
+            <option value="Tainan">Tainan</option>
+            <option value="Taichung">Taichung</option>
+            <option value="Taoyuan">Taoyuan</option>
+          </select>
+        </p>
+      </td>
+      <td colspan="2">
+        <p>Birthday
+          <input type="date" name="birthday">
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        <p>
+          email
+          <input type="email" name="email">
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td>Hobby</td>
+      <td colspan="3">
+        <form>
+          <input type="checkbox" name="hobby" for="Swimming" value="Swimming"> Swimming
+          <input type="checkbox" name="hobby" for="Volleyball" value="Volleyball"> Volleyball
+          <input type="checkbox" name="hobby" for="game" value="game"> Game
+          <input type="checkbox" name="hobby" for="Movie" value="Movie"> Movie
+          <input type="checkbox" name="hobby" for="Sleep" value="Sleep"> Sleep
+        </form>
+      </td>
+    </tr>
+    <tr>
+      <td>Skill</td>
+      <td colspan="3">
+        <form>
+          <input type="checkbox" name="skill" for="Java" value="Java"> Java
+          <input type="checkbox" name="skill" for="HTML" value="HTML"> HTML
+          <input type="checkbox" name="skill" for="Python" value="Python"> Python
+          <input type="checkbox" name="skill" for="Microsoft Office" value="Microsoft Office"> Microsoft Office
+          <input type="checkbox" name="skill" for="Primiere" value="Primiere"> Primiere
+        </form>
+      </td>
+    </tr>
+    <tr>
+      <td>Say something</td>
+      <td colspan="3">
+        <textarea name="say" id="say" cols="80%" rows="3"></textarea>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="4">
+        <input type="submit" value="submit">
+        <input type="reset" value="reset">
+      </td>
+    </tr>
+
+  </table>
+
+</body>
+
+</html>
