@@ -1,0 +1,80 @@
+form {
+  margin-left: 5%;
+  margin-right:5%;
+}
+#flexbox1 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+#input1 {
+  width: 45%;
+  margin-left: 3%;
+  font: inherit;
+  vertical-align: baseline;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: #ccc;
+}
+
+#input2 {
+  width: 45%;
+  margin-left: 3%;
+  font: inherit;
+  vertical-align: baseline;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: #ccc;
+}
+#input3 {
+  width: 45%;
+  margin-left: 14%;
+  font: inherit;
+  vertical-align: baseline;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: #ccc;
+}
+
+#input4 {
+  width: 60%;
+  margin-left: 3%;
+  font: inherit;
+  vertical-align: baseline;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: #ccc;
+}
+
+
+#input4-p {
+  margin-left: 2%;
+  margin-right: 34%;
+  font: inherit;
+}
+
+#textarea {
+  resize: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: #ccc;
+  margin-left: 4.5%;
+  margin-top: 2%;
+}
+
+
+#textarea-p {
+  margin-left: -1.5%;
+  margin-right: 34%;
+}
+
+#picture-p {
+  float: left;
+  margin-right: 4%;
+  margin-left: -1.5%;
+}
+
+#img1 {
+  width: 45%; 
+}
