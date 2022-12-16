@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HW4</title>
+</head>
+
+<body>
+
+
+  <script>
+    const firstNumber = window.prompt("Enter first number:");
+    const secondNumber = window.prompt("Enter second number:");
+    if (parseInt(firstNumber) > parseInt(secondNumber)) {
+      document.body.style.backgroundColor = "lightgreen"
+      document.writeln("firstInput > secondInput")
+    } else if (parseInt(firstNumber) < parseInt(secondNumber)) {
+      document.body.style.backgroundColor = "lightblue"
+      document.writeln("firstInput < secondInput")
+    } else {
+      document.body.style.backgroundColor = "lightyellow"
+      document.writeln("firstInput === secondInput")
+    }
+  </script>
+
+  <br>
+  <button onclick="alert(`firstNumber = ${firstNumber}`)">
+    show first number
+  </button>
+  <br>
+  <button onclick="alert(`secondNumber = ${secondNumber}`)">
+    show second number
+  </button>
+
+</body>
+
+</html>
