@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab5</title>
+</head>
+
+<body>
+  <ol>
+    <li><img id="dice1" src="./dice1.png"></li>
+    <li><img id="dice2" src="./dice2.png"></li>
+    <li><img id="dice3" src="./dice3.png"></li>
+    <li><img id="dice4" src="./dice4.png"></li>
+    <li><img id="dice5" src="./dice5.png"></li>
+    <li><img id="dice6" src="./dice6.png"></li>
+    <li><img id="dice7" src="./dice1.png"></li>
+    <li><img id="dice8" src="./dice2.png"></li>
+    <li><img id="dice9" src="./dice3.png"></li>
+    <li><img id="dice10" src="./dice4.png"></li>
+    <li><img id="dice11" src="./dice5.png"></li>
+    <li><img id="dice12" src="./dice6.png"></li>
+  </ol>
+
+  <table>
+    <!-- build a row named Face & a row named Frequency -->
+    <tr>
+      <th>Face</th>
+      <th>Frequency</th>
+      <th>Percentage</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td id="frequency1">0</td>
+      <td id="Percentage1">0</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td id="frequency2">0</td>
+      <td id="Percentage2">0</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td id="frequency3">0</td>
+      <td id="Percentage3">0</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td id="frequency4">0</td>
+      <td id="Percentage4">0</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td id="frequency5">0</td>
+      <td id="Percentage5">0</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td id="frequency6">0</td>
+      <td id="Percentage6">0</td>
+    </tr>
+
+
+  </table>
+
+  <button onclick="rollDices" id="button1">
+    Roll Dice
+  </button>
+
+  <script>
+    function main() {
+      const button = document.getElementById("button1");
+
+      const dice1 = document.getElementById("dice1");
+      const dice2 = document.getElementById("dice2");
+      const dice3 = document.getElementById("dice3");
+      const dice4 = document.getElementById("dice4");
+      const dice5 = document.getElementById("dice5");
+      const dice6 = document.getElementById("dice6");
+      const dice7 = document.getElementById("dice7");
+      const dice8 = document.getElementById("dice8");
+      const dice9 = document.getElementById("dice9");
+      const dice10 = document.getElementById("dice10");
+      const dice11 = document.getElementById("dice11");
+      const dice12 = document.getElementById("dice12");
+      const dices = [dice1, dice2, dice3, dice4, dice5, dice6, dice7, dice8, dice9, dice10, dice11, dice12];
+      const frequency = [0, 0, 0, 0, 0, 0];
+
+      button.addEventListener("click", () => {
+        const result = rollDices(dices, frequency);
+        console.log(result, "frequencies")
+        renewFreq(result);
+      });
+    }
+
+    function rollDices(dices, frequency) {
+      for (let i = 0; i < dices.length; i++) {
+        const dice = dices[i];
+        const diceValue = Math.floor(Math.random() * 6) + 1;
+        dice.src = `./dice${diceValue}.png`;
+        switch (diceValue) {
+          case 1:
+            frequency[0]++;
+            break;
+          case 2:
+            frequency[1]++;
+            break;
+          case 3:
+            frequency[2]++;
+            break;
+          case 4:
+            frequency[3]++;
+            break;
+          case 5:
+            frequency[4]++;
+            break;
+          case 6:
+            frequency[5]++;
+            break;
+          default:
+            break;
+        }
+      }
+      return frequency;
+    }
+
+    function renewFreq(frequency) {
+      const frequency1 = document.getElementById("frequency1");
+      const frequency2 = document.getElementById("frequency2");
+      const frequency3 = document.getElementById("frequency3");
+      const frequency4 = document.getElementById("frequency4");
+      const frequency5 = document.getElementById("frequency5");
+      const frequency6 = document.getElementById("frequency6");
+
+      const percentage1 = document.getElementById("Percentage1");
+      const percentage2 = document.getElementById("Percentage2");
+      const percentage3 = document.getElementById("Percentage3");
+      const percentage4 = document.getElementById("Percentage4");
+      const percentage5 = document.getElementById("Percentage5");
+      const percentage6 = document.getElementById("Percentage6");
+
+      const frequencies = [frequency1, frequency2, frequency3, frequency4, frequency5, frequency6];
+      const percentages = [
+        percentage1,
+        percentage2,
+        percentage3,
+        percentage4,
+        percentage5,
+        percentage6,
+      ]
+      let total = 0
+
+      for (let i = 0; i < frequencies.length; i++) {
+        const freq = frequencies[i];
+        freq.innerText = frequency[i];
+        total += parseInt(freq.innerText)
+      }
+
+      for (let j = 0; j < percentages.length; j++) {
+        const p = percentages[j];
+        console.log(total, "toatl")
+        console.log(frequencies[j].innerText)
+        p.innerText = Math.round((parseInt(frequencies[j].innerText)) / total * 100) / 100
+
+      }
+
+    }
+
+    main();
+  </script>
+
+
+</body>
+
+</html>
